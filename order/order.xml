@@ -1,0 +1,87 @@
+<!-- Question 2: Make an Order with the Following Detail:  -->
+    <!-- Having an orderItem   -->
+    <!-- Having an OrderAdjustment   -->
+
+
+
+<!-- Step: 1 -->
+<OrderHeader
+orderId="SOS10001"
+orderTypeId="PURCHASE_ORDER"
+orderName="TO-101"
+externalid="amazon"
+/>
+
+
+<!-- Step: 2 -->
+<OrderContactMech
+orderId="SOS10001"
+contactMechPurposeTypeId="PRIMARY_EMAIL"
+contactMechId="CC10002"
+/>
+
+<!-- Step: 3 -->
+
+<OrderRole
+orderId="SOS10001"
+partyId="SS10001"
+roleTypeId="CUSTOMER"
+fromDate="2025-04-10 10:39:38.881"
+/>
+
+<!-- Step: 4 -->
+
+<OrderAdjustment
+orderAdjustmentId="OA10001"
+orderId="SOS10001"
+orderItemSeqId="00101"
+orderAdjustmentTypeId="DISCOUNT_ADJUSTMENT"
+shipGroupSeqId="00001"
+/>
+
+
+<!-- Step: 5 -->
+<OrderStatus
+orderStatusId="OO10001"
+statusId="ORDER_CREATED	"
+orderId="SOS10001"
+orderPaymentPreferencId="OP10001"
+orderItemSeqId="00101"
+/>
+
+<!-- Step: 6 -->
+<OrderItemShipGroup
+orderId="SOS10001"
+shipGroupSeqId="00001"
+shipmentMethodTypeId="STANDARD"
+/>
+
+<!-- Step: 7 -->
+<OrderItemAssoc
+orderId="SOS10001"
+orderItemSeqId="00101"
+shipGroupSeqId="00001"
+orderItemAssocTypeId="PURCHASE_ORDER"
+toOrderId="SOS10001"
+toOrderItemSeqId="00101"
+toShipGroupSeqId="00001"
+quantity="10"
+/>
+
+
+<!-- Step: 8 -->
+
+<OrderPaymentPreference
+orderPaymentPreferenceId="OP10001"
+orderId="SOS10001"
+orderItemSeqId="00101"
+
+/>
+<!-- TODO: Step:- 9 -->
+<OrderItemShipGrpInvRes
+orderId="SOS10001"
+inventoryItemId=""
+shipGroupSeqId="00001"
+reserveOrderEnumId=""
+orderItemSeqId="00101"
+/>
