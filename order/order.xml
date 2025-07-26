@@ -52,9 +52,10 @@ shipGroupSeqId="00001"
 
 
 <!-- Step: 6 -->
+
 <!-- For Maintaining the orderStatus-->
 <OrderStatus
-orderStatusId="OO10001"
+orderStatusId="OO10002"
 statusId="ORDER_CREATED"
 orderId="SOS10001"
 orderPaymentPreferencId="OP10001"
