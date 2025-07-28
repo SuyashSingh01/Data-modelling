@@ -18,14 +18,14 @@
 
 <PartyRole partyId="SS10001" roleTypeId="CUSTOMER"/>
 
+
 <!-- Step: 4 -->
 
 <!-- The customer should have Billing / Shipping address ,Billing/ Shipping Phone and Email  -->
 
-
 <ContactMech contactMechId="CC10002" contactMechTypeId="EMAIL_ADDRESS" infoString="customer@outlook.com"/>
-<!-- Shipping Address -->
 
+<!-- Shipping Address -->
 <ContactMech contactMechId="CC10001" contactMechTypeId="POSTAL_ADDRESS" />
 
 <!-- Billing Address -->
@@ -36,6 +36,7 @@
 
 <!-- Shipping Phone -->
 <ContactMech contactMechId="CC10004" contactMechTypeId="TELECOM_NUMBER"/>
+
 
 <!-- Add the Detail of Each Entity -->
 
@@ -48,7 +49,7 @@
 
 <!-- Shipping Address -->
 
-<PostalAddress contactMechId="CC10001" address1="Indorama" city="Dhar"postalCode="454775"/>
+<PostalAddress contactMechId="CC10001" address1="Indorama" city="Dhar" postalCode="454775"/>
 
 <!-- Billing Address -->
 
@@ -58,8 +59,8 @@
 
 <!-- Step: 5 -->
 
-
 <!--  Relate the party with its contact -->
+
 <PartyContactMech partyId="SS10001" contactMechId="CC10001" fromDate="2025-04-10 10:34:38.871"/>
 
 <PartyContactMech partyId="SS10001" contactMechId="CC10002" fromDate="2025-04-10 10:34:38.871"/>
@@ -68,8 +69,7 @@
 
 <PartyContactMech partyId="SS10001" contactMechId="CC10004" fromDate="2025-04-10 10:34:38.871"/>
 
-<PartyContactMech partyId="SS10001" contactMechId="CC10005" fromDate="2025-04-10 10:34:38.871"
-/>
+<PartyContactMech partyId="SS10001" contactMechId="CC10005" fromDate="2025-04-10 10:34:38.871"/>
 
 <!-- Step:6 -->
 
@@ -89,18 +89,16 @@
 
 
 <!-- Primary Email -->
-
 <PartyContactMechPurpose partyId="SS10001" contactMechId="CC10002" contactMechPurposeTypeId="PRIMARY_EMAIL" fromDate="2025-04-10 10:34:38.881"/>
-<!-- Billing Location -->
 
+<!-- Billing Location -->
 <PartyContactMechPurpose partyId="SS10001" contactMechId="CC10005" contactMechPurposeTypeId="BILLING_LOCATION" fromDate="2025-04-10 10:34:38.871"/>
 
 <!-- Shipping Location -->
-
 <PartyContactMechPurpose partyId="SS10001" contactMechId="CC10001" contactMechPurposeTypeId="SHIPPING_LOCATION" fromDate="2025-04-10 10:34:38.871"/>
+
 <!-- Shipping Phone -->
-
 <PartyContactMechPurpose partyId="SS10001" contactMechId="CC10004" contactMechPurposeTypeId="PHONE_SHIPPING" fromDate="2025-04-10 10:34:38.871"/>
-<!-- Billing Phone -->
 
+<!-- Billing Phone -->
 <PartyContactMechPurpose partyId="SS10001" contactMechId="CC10003" contactMechPurposeTypeId="PHONE_BILLING" fromDate="2025-04-10 10:34:38.871"/>
