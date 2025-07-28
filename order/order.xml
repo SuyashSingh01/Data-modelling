@@ -1,103 +1,44 @@
 <!-- Question 2: Make an Order with the Following Detail:  -->
     <!-- Having an orderItem   -->
     <!-- Having an OrderAdjustment   -->
+    <!-- An orderFlow of any Ecommerce website -->
 
 
 <!-- Step: 1 -->
 
 <!-- OrderItem -->
-<OrderItem
-orderId="SOS10001"
-orderItemSeqId="00101"
-OrderItemType="PRODUCT_ORDER_ITEM"
-productId="10069"
-prodCatalogId="CATALOG"
-quantity="10"
-unitPrice="100"
-/>
+<OrderItem orderId="SOS10001" orderItemSeqId="00101" orderItemType="PRODUCT_ORDER_ITEM" productId="10069" prodCatalogId="CATALOG" quantity="10" unitPrice="100" />
+
 <!-- Step: 2 -->
-<OrderHeader
-orderId="SOS10001"
-orderTypeId="PURCHASE_ORDER"
-orderName="TO-101"
-externalid="amazon"
-/>
+<OrderHeader orderId="SOS10001" orderTypeId="PURCHASE_ORDER" orderName="TO-101" externalid="amazon"/>
 
 
 <!-- Step: 3 -->
-<OrderContactMech
-orderId="SOS10001"
-contactMechPurposeTypeId="PRIMARY_EMAIL"
-contactMechId="CC10002"
-/>
+<OrderContactMech orderId="SOS10001" contactMechPurposeTypeId="PRIMARY_EMAIL" contactMechId="CC10002"/>
 
 <!-- Step: 4 -->
 
-<OrderRole
-orderId="SOS10001"
-partyId="SS10001"
-roleTypeId="CUSTOMER"
-fromDate="2025-04-10 10:39:38.881"
-/>
+<OrderRole orderId="SOS10001" partyId="SS10001" roleTypeId="CUSTOMER" fromDate="2025-04-10 10:39:38.881"/>
 
 <!-- Step: 5 -->
 
-<OrderAdjustment
-orderAdjustmentId="OA10001"
-orderId="SOS10001"
-orderItemSeqId="00101"
-orderAdjustmentTypeId="DISCOUNT_ADJUSTMENT"
-shipGroupSeqId="00001"
-/>
+<OrderAdjustment orderAdjustmentId="OA10001" orderId="SOS10001" orderItemSeqId="00101" orderAdjustmentTypeId="DISCOUNT_ADJUSTMENT" shipGroupSeqId="00001"/>
 
 
 <!-- Step: 6 -->
 
 <!-- For Maintaining the orderStatus-->
-<OrderStatus
-orderStatusId="OO10002"
-statusId="ORDER_CREATED"
-orderId="SOS10001"
-orderPaymentPreferencId="OP10001"
-/>
+<OrderStatus orderStatusId="OO10002" statusId="ORDER_CREATED" orderId="SOS10001" orderPaymentPreferencId="OP10001" />
 <!-- For Maintaining the orderItem status-->
-<OrderStatus
-orderStatusId="OO10001"
-statusId="ORDER_CREATED"
-orderId="SOS10001"
-orderPaymentPreferencId="OP10001"
-orderItemSeqId="00101"
-/>
+<OrderStatus orderStatusId="OO10001" statusId="ORDER_CREATED" orderId="SOS10001" orderPaymentPreferencId="OP10001" orderItemSeqId="00101"/>
 
 <!-- Step: 7 -->
-<OrderItemShipGroup
-orderId="SOS10001"
-shipGroupSeqId="00001"
-shipmentMethodTypeId="STANDARD"
-/>
-
-<!-- Step: 7
-<OrderItemAssoc
-orderId="SOS10001"
-orderItemSeqId="00101"
-shipGroupSeqId="00001"
-orderItemAssocTypeId="PURCHASE_ORDER"
-toOrderId="SOS10001"
-toOrderItemSeqId="00101"
-toShipGroupSeqId="00001"
-quantity="10"
-/> -->
-
+<OrderItemShipGroup orderId="SOS10001" shipGroupSeqId="00001" shipmentMethodTypeId="STANDARD" />
 
 <!-- Step: 8 -->
 
-<OrderPaymentPreference
-orderPaymentPreferenceId="OP10001"
-orderId="SOS10001"
-orderItemSeqId="00101"
-paymentMethodTypeId = "CREDIT_CARD"
+<OrderPaymentPreference orderPaymentPreferenceId="OP10001" orderId="SOS10001" orderItemSeqId="00101" paymentMethodTypeId = "CREDIT_CARD"/>
 
-/>
 <!-- TODO: Step:- 9
 <OrderItemShipGrpInvRes
 orderId="SOS10001"
