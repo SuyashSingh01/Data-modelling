@@ -12,16 +12,13 @@
 <!-- Step: 2 -->
 <OrderHeader orderId="SOS10001" orderTypeId="PURCHASE_ORDER" orderName="TO-101" externalid="amazon"/>
 
-
 <!-- Step: 3 -->
 <OrderContactMech orderId="SOS10001" contactMechPurposeTypeId="PRIMARY_EMAIL" contactMechId="CC10002"/>
 
 <!-- Step: 4 -->
-
 <OrderRole orderId="SOS10001" partyId="SS10001" roleTypeId="CUSTOMER" fromDate="2025-04-10 10:39:38.881"/>
 
 <!-- Step: 5 -->
-
 <OrderAdjustment orderAdjustmentId="OA10001" orderId="SOS10001" orderItemSeqId="00101" orderAdjustmentTypeId="DISCOUNT_ADJUSTMENT" shipGroupSeqId="00001"/>
 
 
@@ -35,15 +32,9 @@
 <!-- Step: 7 -->
 <OrderItemShipGroup orderId="SOS10001" shipGroupSeqId="00001" shipmentMethodTypeId="STANDARD" />
 
-<!-- Step: 8 -->
 
+<!-- Step: 8 -->
 <OrderPaymentPreference orderPaymentPreferenceId="OP10001" orderId="SOS10001" orderItemSeqId="00101" paymentMethodTypeId = "CREDIT_CARD"/>
 
-<!-- TODO: Step:- 9
-<OrderItemShipGrpInvRes
-orderId="SOS10001"
-inventoryItemId=""
-shipGroupSeqId="00001"
-reserveOrderEnumId=""
-orderItemSeqId="00101"
-/> -->
+<!-- TODO: Step:- 9 -->
+<!-- <OrderItemShipGrpInvRes orderId="SOS10001" inventoryItemId="" shipGroupSeqId="00001" changeReasonreserveOrderEnumId="" orderItemSeqId="00101"/>  -->
