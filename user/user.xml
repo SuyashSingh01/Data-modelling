@@ -1,14 +1,10 @@
 <!-- Question 3 :- Create an User with Different Permissions  belonging to particular Group  -->
 
-
-<!--  User Created -->
-
 <UserLogin userLoginId="SU10001" currentPassword="password" partyId="SS10001" enabled="Y"/>
 
 <!-- Entity That can be added  and relate with UserLogin -->
 <!-- <UserLoginHistory />   -->
 <!-- <UserLoginPasswordHistory/> -->
-
 
 <!-- Step 1: Already it is Created -->
 
@@ -35,5 +31,5 @@
 
 <!-- Step 4 : Create an User and Associate the User with Group id and Party Id Having Multiple Permission -->
 
-<UserLoginSecurityGroup userLoginId="SU10001" groupId="STORE_ADMIN" partyId="SS10001" fromDate="2025-07-29 15:45:25.859	"/>
-<UserLoginSecurityGroup userLoginId="SU10001" groupId="STORE_MANAGER" partyId="SS10001" fromDate="2025-07-29 15:45:25.859	"/>
+<UserLoginSecurityGroup userLoginId="SU10001" groupId="STORE_ADMIN" fromDate="2025-07-29 15:45:25.859	"/>
+<UserLoginSecurityGroup userLoginId="SU10001" groupId="STORE_MANAGER" fromDate="2025-07-29 15:45:25.859	"/>

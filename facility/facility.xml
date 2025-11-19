@@ -1,0 +1,100 @@
+    <!-- MANUFACTURER PARTY   -->
+    <Party partyId="MANUF_TECHCORP" partyTypeId="PARTY_GROUP" statusId="PARTY_ENABLED"/>
+    <PartyGroup partyId="MANUF_TECHCORP" 
+                groupName="TechCorp Manufacturing Ltd."
+                officeSiteName="TechCorp HQ"
+                comments="Leading manufacturer of computer equipment"/>
+    <PartyRole partyId="MANUF_TECHCORP" roleTypeId="MANUFACTURER"/>
+    <PartyRole partyId="MANUF_TECHCORP" roleTypeId="SUPPLIER"/>
+<!--                       FACILITY AND INVENTORY                    -->
+
+    <Facility facilityId="WAREHOUSE_01"  
+                    facilityTypeId="WAREHOUSE"
+                    facilityName="Main Warehouse" 
+                    ownerPartyId="COMPANY"/>
+    
+    <FacilityLocation facilityId="WAREHOUSE_01" 
+                    locationSeqId="A-01-01" 
+                    areaId="A" 
+                    aisleId="01" 
+                    sectionId="01"/>
+  
+    <FacilityLocation facilityId="WAREHOUSE_01" 
+                    locationSeqId="A-01-02" 
+                    areaId="A" 
+                    aisleId="01" 
+                    sectionId="02"/>
+  
+   <FacilityLocation facilityId="WAREHOUSE_01" 
+                    locationSeqId="B-05-01" 
+                    areaId="B" 
+                    aisleId="05" 
+                    sectionId="01"/>
+   <FacilityLocation facilityId="WAREHOUSE_01" 
+                    locationSeqId="A-01-02" 
+                    areaId="A" 
+                    aisleId="01" 
+                    sectionId="02"/>
+  
+   <FacilityLocation facilityId="WAREHOUSE_01" 
+                    locationSeqId="B-05-01" 
+                    areaId="B" 
+                    aisleId="05" 
+                    sectionId="01"/>
+  
+  <!-- Inventory Items for Laptops (Serialized) -->
+  
+  <InventoryItem inventoryItemId="INV_SMARTPHONE_001" 
+                 inventoryItemTypeId="SERIALIZED_INV_ITEM"
+                 productId="PP10001"
+                 facilityId="WAREHOUSE_01"
+                 locationSeqId="A-01-01"
+                 statusId="INV_AVAILABLE"
+                 datetimeReceived="2024-01-10 08:00:00.000"
+                 serialNumber="LT2024-001"
+                 unitCost="650.00"
+                 currencyUomId="USD"
+                 quantityOnHandTotal="1"
+                 availableToPromiseTotal="1"/>
+  
+
+  <InventoryItem inventoryItemId="INV_LAPTOP_001" 
+                 inventoryItemTypeId="SERIALIZED_INV_ITEM"
+                 productId="PP10006"
+                 facilityId="WAREHOUSE_01"
+                 locationSeqId="A-01-01"
+                 statusId="INV_AVAILABLE"
+                 datetimeReceived="2024-01-10 08:00:00.000"
+                 serialNumber="LT2024-001"
+                 unitCost="650.00"
+                 currencyUomId="USD"
+                 quantityOnHandTotal="1"
+                 availableToPromiseTotal="1"/>
+  
+  <InventoryItem inventoryItemId="INV_LAPTOP_002" 
+                 inventoryItemTypeId="SERIALIZED_INV_ITEM"
+                 productId="PP10007"
+                 facilityId="WAREHOUSE_01"
+                 locationSeqId="A-01-02"
+                 statusId="INV_AVAILABLE"
+                 datetimeReceived="2024-01-10 08:00:00.000"
+                 serialNumber="LT2024-002"
+                 unitCost="650.00"
+                 currencyUomId="USD"
+                 quantityOnHandTotal="1"
+                 availableToPromiseTotal="1"/>
+  
+  <!-- Inventory Item for Mice (Non-Serialized) -->
+  <!-- <InventoryItem inventoryItemId="INV_MOUSE_001" 
+                 inventoryItemTypeId="NON_SERIAL_INV_ITEM"
+                 productId="PROD_MOUSE_001"
+                 facilityId="WAREHOUSE_01"
+                 locationSeqId="B-05-01"
+                 statusId="INV_AVAILABLE"
+                 datetimeReceived="2024-01-05 08:00:00.000"
+                 unitCost="15.00"
+                 currencyUomId="USD"
+                 quantityOnHandTotal="50"
+                 availableToPromiseTotal="50"/> -->
+
+<!-- <Facility facilityId="FF10000" facilityTypeId="OUTLET_WAREHOUSE" ownerPartyId="" facilityName="DOORSTEP"/> -->
