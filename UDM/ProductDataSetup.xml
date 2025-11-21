@@ -1,0 +1,37 @@
+<entity-engine-xml> 
+
+<!--                            Product & its type Creation                                -->
+<ProductType productTypeId="FINISHED_GOOD" parentTypeId="GOOD" hasTable="Y" description="Finished Goods"/>
+
+<!--           Virtual, Variant Products Smartphone come under Electronics Category                    -->
+
+<Product  productId="PP10000" internalName="Smart Phone X - Variant" productTypeId="FINISHED_GOOD" isVirtual="Y" isVariant="N" virtualVariantMethodEnum="VV_VARIANTTREE"/>
+
+<Product productId="PP10001" productTypeId="FINISHED_GOOD" internalName="Phone-Model-01" productName="Smartphone Model 1" isVirtual="N" isVariant="Y"/>
+<ProductPrice productId="PP10001" productPriceTypeId="LIST_PRICE" price="100" currencyUomId="USD" fromDate="2025-01-01 00:00:00.0  " productStoreGroupId="_NA_" productPricePurposeId="PURCHASE"/>
+<ProductCategoryMember productCategoryId="CAT101" productId="PP10001" fromDate="2024-01-01 00:00:00.0"/>
+<GoodIdentification productId="PP10001" goodIdentificationTypeId="SKU" idValue="SKU-PH-001"  fromDate="2024-01-01 00:00:00.0"/>
+
+<Product  productId="PP10002" internalName="Smart Charger Y - Variant" productTypeId="FINISHED_GOOD" isVirtual="Y" isVariant="N" virtualVariantMethodEnum="VV_VARIANTTREE"/>
+
+<Product productId="PP10008" productTypeId="FINISHED_GOOD" internalName="Charger-Model-02" productName="Charge Model 2"  isVirtual="N" isVariant="Y"/>
+<ProductPrice productId="PP10008" productPriceTypeId="LIST_PRICE" price="100" currencyUomId="USD" fromDate="2025-01-01 00:00:00.0  " productStoreGroupId="_NA_" productPricePurposeId="PURCHASE"/>
+<ProductCategoryMember productCategoryId="CAT101" productId="PP10008" fromDate="2024-01-01 00:00:00.0"/>        
+<GoodIdentification productId="PP10008" goodIdentificationTypeId="UPCA" idValue="UPCA-CT-002" fromDate="2024-01-01 00:00:00.0"/>
+
+
+<!--                        Kit Association                                 -->
+<ProductAssoc productId="PP10001" productIdTo="PP10008" productAssocTypeId="PRODUCT_COMPONENT" fromDate="2025-11-14 12:05:00.0" quantity="1"/>
+
+<!--                       Create Product Feature                           -->
+<ProductFeatureType productFeatureTypeId="COLOR" description="COLOR"/>
+
+<ProductFeature  productFeatureId="FALCON_GREEN" productFeatureTypeId="COLOR" description="Green"/>
+<ProductFeature productFeatureId="FALCON_BLUE" productFeatureTypeId="COLOR" description="Blue"/>
+
+<ProductFeatureAppl fromDate="2025-11-14 12:00:00.0" productId="PP10001" productFeatureId="FALCON_GREEN" productFeatureApplTypeId="STANDARD_FEATURE"/>
+<ProductFeatureAppl fromDate="2025-11-14 12:00:00.0" productId="PP10001" productFeatureId="FALCON_BLUE" productFeatureApplTypeId="STANDARD_FEATURE"/>
+
+</entity-engine-xml>
+
+

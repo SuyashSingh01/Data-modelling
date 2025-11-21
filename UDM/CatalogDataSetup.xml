@@ -1,0 +1,29 @@
+<entity-engine-xml> 
+
+<!--                        PRODUCT STORES                              -->
+<ProductStore productStoreId="STORE_1" storeName="StoreName" companyName="Demo Company" payToPartyId="COMPANY"/>
+
+<!--                        PRODUCT CATALOG                             -->
+<ProdCatalog prodCatalogId="CATA100" catalogName="Online Store Catalog"/>
+
+<!--                        PRODUCT STORE CATALOG                       -->
+<ProductStoreCatalog productStoreId="STORE_1" prodCatalogId="CATA100" fromDate="2025-11-14 10:00:00.0"/>
+
+
+<!--                        CATEGORIES (10 TOTAL)                       -->
+
+<!--                        Electronics                                 -->
+<ProductCategory productCategoryId="CAT100" categoryName="Electronics"/>
+<ProductCategory productCategoryId="CAT101" categoryName="Smartphones" primaryParentCategoryId="CAT100"/>
+
+<!--                        Fashion                                     -->
+<ProductCategory productCategoryId="CAT200" categoryName="Fashion"/>
+<ProductCategory productCategoryId="CAT201" categoryName="Men Shirts" primaryParentCategoryId="CAT200"/>
+
+<!--                        Attach top-level categories                 -->
+<ProductStoreCatalog prodCatalogId="CATA100" productStoreId="STORE_1"  fromDate="2025-11-14 10:00:00.0" />
+<ProdCatalogCategory prodCatalogId="CATA100" productCategoryId="CAT100" fromDate="2025-01-28 00:00:00.0" prodCatalogCategoryTypeId="PCCT_PROMOTIONS" sequenceNum="1" />
+<ProdCatalogCategory prodCatalogId="CATA100" productCategoryId="CAT200" fromDate="2025-01-28 00:00:00.0" prodCatalogCategoryTypeId="PCCT_PROMOTIONS" sequenceNum="2" />
+
+
+</entity-engine-xml>

@@ -1,0 +1,121 @@
+<entity-engine-xml> 
+
+<!--Create Order Header-->
+<OrderHeader  orderId="SOS10001" orderTypeId="SALES_ORDER" statusId="ORDER_CREATED" createdBy="vijay.mallya" orderDate="2025-11-15 00:00:00.0" entryDate="2025-11-15 00:00:00.0" />
+
+<!--Set Initial Order Status-->
+<OrderStatus orderStatusId="SOS10001OC" orderId="SOS10001" statusId="ORDER_CREATED" statusUserLogin="vijay.mallya" />
+
+<!--Define Shipment Group-->
+<OrderItemShipGroup orderId="SOS10001" shipGroupSeqId="1" shipmentMethodTypeId="SAME_DAY_BLINKIT" carrierPartyId="TEST"/>
+<OrderItemShipGroup orderId="SOS10001" shipGroupSeqId="2" shipmentMethodTypeId="SAME_DAY_BLINKIT" carrierPartyId="TEST"/>
+
+<!--Add Order Items and Line Status-->
+<OrderItem orderId="SOS10001" orderItemSeqId="1" shipGroupSeqId="1" productId="PP10001" statusId="ITEM_CREATED" quantity="1" facilityID="_NA_"/>
+<OrderStatus orderStatusId="SOS10001OC" orderId="SOS10001" orderItemSeqId="1" statusId="ITEM_CREATED" facilityID="_NA_" />
+<OrderItem orderId="SOS10001" orderItemSeqId="2" shipGroupSeqId="2" productId="PP10008" statusId="ITEM_CREATED" quantity="1" facilityID="_NA_" />
+<OrderStatus orderStatusId="SOS10001OC" orderId="SOS10001" orderItemSeqId="2" statusId="ITEM_CREATED" facilityID="_NA_" />
+
+<!--Assign Contact Mechanisms for Addresses-->
+<OrderContactMech orderId="SOS10001" contactMechId="CC10001" contactMechPurposeTypeId="SHIPPING_LOCATION"/>
+<OrderContactMech orderId="SOS10001" contactMechId="CC10005" contactMechPurposeTypeId="BILLING_LOCATION"/>
+
+<!--Assign Contact Mechanisms for Phone and Email-->
+<OrderContactMech orderId="SOS10001" contactMechId="CC10003" contactMechPurposeTypeId="PHONE_BILLING"/>
+<OrderContactMech orderId="SOS10001" contactMechId="CC10004" contactMechPurposeTypeId="PHONE_SHIPPING"/>
+<OrderContactMech orderId="SOS10001" contactMechId="CC10002" contactMechPurposeTypeId="BILLING_EMAIL" />
+
+<!--Assign Roles to Parties-->
+<OrderRole orderId="SOS10001" roleTypeId="SHIP_TO_CUSTOMER" partyId="SS10001" fromDate="2025-03-18 05:15:43.177" />
+<OrderRole orderId="SOS10001" roleTypeId="BILL_TO_CUSTOMER" partyId="SS10001" fromDate="2025-03-18 05:15:43.177" />
+
+<!--Add Payment Preferences-->
+<OrderPaymentPreference orderPaymentPreferenceId="OPP1" orderId="SOS10001" paymentMethodTypeId="EXT_SHOP_PAYPAL" statusId="PAYMENT_AUTHORIZED" />
+
+<!--Approved Order-->
+<OrderHeader  orderId="SOS10001" orderTypeId="SALES_ORDER" statusId="ORDER_APPROVED" createdBy="vijay.mallya" orderDate="2025-11-15 00:00:00.0" entryDate="2025-11-15 00:00:00.0" />
+
+<OrderStatus orderStatusId="SOS10001APP" orderId="SOS10001" statusId="ORDER_APPROVED" statusUserLogin="vijay.mallya" />
+
+<OrderItem orderId="SOS10001" orderItemSeqId="1" shipGroupSeqId="1" productId="PP10001" statusId="ITEM_APPROVED" quantity="1" />
+<OrderStatus orderStatusId="SOS10001APP1" orderId="SOS10001" orderItemSeqId="1" statusId="ITEM_APPROVED"/>
+<OrderItem orderId="SOS10001" orderItemSeqId="2" shipGroupSeqId="2" productId="PP10008" statusId="ITEM_APPROVED" quantity="1" />
+<OrderStatus orderStatusId="SOS10001APP2" orderId="SOS10001" orderItemSeqId="2" statusId="ITEM_APPROVED" />
+
+<OrderItemShipGroup orderId="SOS10001" shipGroupSeqId="1" shipmentMethodTypeId="SAME_DAY_BLINKIT" carrierPartyId="TEST" facilityId="WAREHOUSE_01"/>
+<OrderItemShipGroup orderId="SOS10001" shipGroupSeqId="2" shipmentMethodTypeId="SAME_DAY_BLINKIT" carrierPartyId="TEST" facilityId="WAREHOUSE_01"/>
+
+<InventoryItemDetail availableToPromiseDiff="-1.000000" effectiveDate="2025-11-17 08:15:39.613" inventoryItemDetailSeqId="FA101D" inventoryItemId="FA101" lastAvailableToPromise="100.000000" lastQuantityOnHand="100.000000" lastUpdatedStamp="2025-11-18 08:15:39.516" orderId="SOS10001" orderItemSeqId="1" quantityOnHandDiff="0.000000" shipGroupSeqId="1" />
+<InventoryItemDetail availableToPromiseDiff="-1.000000" effectiveDate="2025-11-17 08:15:39.613" inventoryItemDetailSeqId="FA101E" inventoryItemId="FA102" lastAvailableToPromise="100.000000" lastQuantityOnHand="100.000000" lastUpdatedStamp="2025-11-18 08:15:39.516" orderId="SOS10001" orderItemSeqId="2" quantityOnHandDiff="0.000000" shipGroupSeqId="2" />
+
+<InventoryItem accountingQuantityTotal="100.000000" availableToPromiseTotal="99.000000" datetimeReceived="2025-01-01 09:36:42.0" facilityId="WAREHOUSE_01" inventoryItemId="FA101" inventoryItemTypeId="NON_SERIAL_INV_ITEM" locationSeqId="TLTLTL01" ownerPartyId="COMPANY" productId="FALCON_BLUE" quantityOnHandTotal="100.000000" unitCost="600.000000"/>
+<InventoryItem accountingQuantityTotal="100.000000" availableToPromiseTotal="99.000000" datetimeReceived="2025-01-01 09:36:42.0" facilityId="WAREHOUSE_01" inventoryItemId="FA102" inventoryItemTypeId="NON_SERIAL_INV_ITEM" locationSeqId="TLTLTL01" ownerPartyId="COMPANY" productId="PP10001" quantityOnHandTotal="100.000000" unitCost="600.000000"/>
+
+<OrderItemShipGrpInvRes inventoryItemId="FA101" orderId="SOS10001" orderItemSeqId="1" quantity="1.000000" reserveOrderEnumId="INVRO_FIFO_REC" reservedDatetime="2024-07-31 11:00:16.698" shipGroupSeqId="1"/> 
+<OrderItemShipGrpInvRes inventoryItemId="FA102" orderId="SOS10001" orderItemSeqId="2" quantity="1.000000" reserveOrderEnumId="INVRO_FIFO_REC" reservedDatetime="2024-07-31 11:00:16.698" shipGroupSeqId="2"/>
+
+<ProductFacility computedLastInventoryCount="99.000000" facilityId="WAREHOUSE_01" inventoryItemId="FA102" minimumStock="10" allowBrokering="N" lastInventoryCount="100.000000" productId="PP10001"/>
+<ProductFacility computedLastInventoryCount="99.000000" facilityId="WAREHOUSE_01" inventoryItemId="FA101" minimumStock="10" allowBrokering="N" lastInventoryCount="100.000000" productId="PP10001"/>
+
+<!--In Progress-->
+
+<Shipment createdByUserLogin="steve.rogers" destinationContactMechId="CM2025080402" estimatedShipCost="0.00" originContactMechId="33472" originfacilityId="WAREHOUSE_01" partyIdFrom="COMPANY" partyIdTo="SS10001" primaryOrderId="SOS10001" primaryShipGroupSeqId="1" shipmentId="F10030" shipmentTypeId="SALES_SHIPMENT" statusId="SHIPMENT_INPUT"/>
+<Shipment createdByUserLogin="steve.rogers" destinationContactMechId="CM2025080402" estimatedShipCost="0.00" originContactMechId="33472" originfacilityId="WAREHOUSE_01" partyIdFrom="COMPANY" partyIdTo="SS10001" primaryOrderId="SOS10001" primaryShipGroupSeqId="2" shipmentId="F10031" shipmentTypeId="SALES_SHIPMENT" statusId="SHIPMENT_INPUT"/>
+
+<OrderShipment orderId="SOS10001" orderItemSeqId="1" quantity="1.000000" shipGroupSeqId="1" shipmentId="F10030" shipmentItemSeqId="1"/>
+<OrderShipment orderId="SOS10001" orderItemSeqId="2" quantity="1.000000" shipGroupSeqId="2" shipmentId="F10031" shipmentItemSeqId="2"/>
+
+<Shipment createdByUserLogin="steve.rogers" destinationContactMechId="CM2025080402" estimatedShipCost="0.00" originContactMechId="33472" originfacilityId="WAREHOUSE_01" partyIdFrom="COMPANY" partyIdTo="SS10001" primaryOrderId="SOS10001" primaryShipGroupSeqId="1" shipmentId="F10030" shipmentTypeId="SALES_SHIPMENT" statusId="SHIPMENT_APPROVED"/>
+<Shipment createdByUserLogin="steve.rogers" destinationContactMechId="CM2025080402" estimatedShipCost="0.00" originContactMechId="33472" originfacilityId="WAREHOUSE_01" partyIdFrom="COMPANY" partyIdTo="SS10001" primaryOrderId="SOS10001" primaryShipGroupSeqId="2" shipmentId="F10031" shipmentTypeId="SALES_SHIPMENT" statusId="SHIPMENT_APPROVED"/>
+
+<ShipmentItem productId="PP10001" quantity="1.000000" shipmentId="F10030" shipmentItemSeqId="1"/>
+<ShipmentItem productId="FALCON_BLUE" quantity="1.000000" shipmentId="F10031" shipmentItemSeqId="2"/>
+
+<ShipmentRouteSegment billingWeight="0.661400" billingWeightUomId="WT_lb" carrierPartyId="TEST" carrierServiceStatusId="SHRSCS_NOT_STARTED" destContactMechId="CM2025080403" originContactMechId="33472" originfacilityId="WAREHOUSE_01" shipmentId="F10030" shipmentMethodTypeId="SAME_DAY_BLINKIT" shipmentRouteSegmentId="01"/>
+<ShipmentRouteSegment billingWeight="0.661400" billingWeightUomId="WT_lb" carrierPartyId="TEST" carrierServiceStatusId="SHRSCS_NOT_STARTED" destContactMechId="CM2025080403" originContactMechId="33472" originfacilityId="WAREHOUSE_01" shipmentId="F10031" shipmentMethodTypeId="SAME_DAY_BLINKIT" shipmentRouteSegmentId="02"/>
+
+<Picklist facilityId="WAREHOUSE_01" picklistDate="2025-11-19 01:12:53.508" picklistId="FM108120" shipmentMethodTypeId="SAME_DAY_BLINKIT" statusId="PICKLIST_INPUT"/>
+<Picklist facilityId="WAREHOUSE_01" picklistDate="2025-11-19 01:12:53.508" picklistId="FM108120" shipmentMethodTypeId="SAME_DAY_BLINKIT" statusId="PICKLIST_ASSIGNED"/>
+<Picklist facilityId="WAREHOUSE_01" picklistDate="2025-11-19 01:12:53.508" picklistId="FM108120" shipmentMethodTypeId="SAME_DAY_BLINKIT" statusId="PICKLIST_PRINTED"/>
+<Picklist facilityId="WAREHOUSE_01" picklistDate="2025-11-19 01:12:53.508" picklistId="FM108120" shipmentMethodTypeId="SAME_DAY_BLINKIT" statusId="PICKLIST_PICKED"/>
+
+<PicklistBin binLocationNumber="1" picklistBinId="F14274" picklistId="FM108120" primaryOrderId="SOS10001" primaryShipGroupSeqId="1"/>
+<PicklistBin binLocationNumber="1" picklistBinId="F14274" picklistId="FM108120" primaryOrderId="SOS10001" primaryShipGroupSeqId="2"/>
+
+<PicklistItem inventoryItemId="FA101" itemStatusId="PICKITEM_PENDING" orderId="SOS10001" orderItemSeqId="1" picked="1.000000" picklistBinId="F14274" quantity="1.000000" shipGroupSeqId="1"/>
+<PicklistItem inventoryItemId="FA102" itemStatusId="PICKITEM_PENDING" orderId="SOS10001" orderItemSeqId="2" picked="1.000000" picklistBinId="F14274" quantity="1.000000" shipGroupSeqId="2"/>
+
+<PicklistItem inventoryItemId="FA101" itemStatusId="PICKITEM_COMPLETED" orderId="SOS10001" orderItemSeqId="1" picked="1.000000" picklistBinId="F14274" quantity="1.000000" shipGroupSeqId="1"/>
+<PicklistItem inventoryItemId="FA102" itemStatusId="PICKITEM_COMPLETED" orderId="SOS10001" orderItemSeqId="2" picked="1.000000" picklistBinId="F14274" quantity="1.000000" shipGroupSeqId="2"/>
+
+<!--Completed-->
+
+<Shipment createdByUserLogin="steve.rogers" destinationContactMechId="CM2025080402" estimatedShipCost="0.00" originContactMechId="33472" originfacilityId="WAREHOUSE_01" partyIdFrom="COMPANY" partyIdTo="SS10001" primaryOrderId="SOS10001" primaryShipGroupSeqId="1" shipmentId="F10030" shipmentTypeId="SALES_SHIPMENT" statusId="SHIPMENT_PACKED"/>
+<Shipment createdByUserLogin="steve.rogers" destinationContactMechId="CM2025080402" estimatedShipCost="0.00" originContactMechId="33472" originfacilityId="WAREHOUSE_01" partyIdFrom="COMPANY" partyIdTo="SS10001" primaryOrderId="SOS10001" primaryShipGroupSeqId="2" shipmentId="F10031" shipmentTypeId="SALES_SHIPMENT" statusId="SHIPMENT_PACKED"/>
+<Shipment createdByUserLogin="steve.rogers" destinationContactMechId="CM2025080402" estimatedShipCost="0.00" originContactMechId="33472" originfacilityId="WAREHOUSE_01" partyIdFrom="COMPANY" partyIdTo="SS10001" primaryOrderId="SOS10001" primaryShipGroupSeqId="1" shipmentId="F10030" shipmentTypeId="SALES_SHIPMENT" statusId="SHIPMENT_SHIPPED"/>
+<Shipment createdByUserLogin="steve.rogers" destinationContactMechId="CM2025080402" estimatedShipCost="0.00" originContactMechId="33472" originfacilityId="WAREHOUSE_01" partyIdFrom="COMPANY" partyIdTo="SS10001" primaryOrderId="SOS10001" primaryShipGroupSeqId="2" shipmentId="F10031" shipmentTypeId="SALES_SHIPMENT" statusId="SHIPMENT_SHIPPED"/>
+
+<ShipmentRouteSegment billingWeight="0.661400" billingWeightUomId="WT_lb" carrierPartyId="TEST" carrierServiceStatusId="SHRSCS_ACCEPTED" destContactMechId="CM2025080403" isTrackingRequired="Y" originContactMechId="33472" originfacilityId="WAREHOUSE_01" referenceNumber="123" shipmentId="F10030" shipmentMethodTypeId="SAME_DAY_BLINKIT" shipmentRouteSegmentId="01" trackingIdNumber="123"/>
+<ShipmentRouteSegment billingWeight="0.661400" billingWeightUomId="WT_lb" carrierPartyId="TEST" carrierServiceStatusId="SHRSCS_ACCEPTED" destContactMechId="CM2025080403" isTrackingRequired="Y" originContactMechId="33472" originfacilityId="WAREHOUSE_01" referenceNumber="123" shipmentId="F10031" shipmentMethodTypeId="SAME_DAY_BLINKIT" shipmentRouteSegmentId="02" trackingIdNumber="123"/>
+
+<ItemIssuance inventoryItemId="FA101" issuedDateTime="2025-11-21 01:59:58.248" itemIssuanceId="FM111068" orderId="SOS10001" orderItemSeqId="1" quantity="1.000000" shipGroupSeqId="1" shipmentId="F10030" shipmentItemSeqId="1"/>
+<ItemIssuance inventoryItemId="FA102" issuedDateTime="2025-11-21 01:59:58.248" itemIssuanceId="FM111069" orderId="SOS10001" orderItemSeqId="2" quantity="1.000000" shipGroupSeqId="2" shipmentId="F10031" shipmentItemSeqId="2"/>
+
+<InventoryItemDetail availableToPromiseDiff="0.000000" effectiveDate="2025-11-17 08:15:39.613" inventoryItemDetailSeqId="FA101D1" inventoryItemId="FA101" itemIssuanceId="FM111068" lastAvailableToPromise="99.000000" quantityOnHandDiff="-1.000000" lastQuantityOnHand="100.000000" lastUpdatedStamp="2025-11-18 08:15:39.516" orderId="SOS10001" orderItemSeqId="1" shipmentId="F10030" shipGroupSeqId="1" />
+<InventoryItemDetail availableToPromiseDiff="0.000000" effectiveDate="2025-11-17 08:15:39.613" inventoryItemDetailSeqId="FA101D2" inventoryItemId="FA102" itemIssuanceId="FM111069" lastAvailableToPromise="99.000000" quantityOnHandDiff="-1.000000" lastQuantityOnHand="100.000000" lastUpdatedStamp="2025-11-18 08:15:39.516" orderId="SOS10001" orderItemSeqId="2" shipmentId="F10031" shipGroupSeqId="2" />
+
+<InventoryItem accountingQuantityTotal="99.000000" availableToPromiseTotal="99.000000" datetimeReceived="2025-01-01 09:36:42.0" facilityId="WAREHOUSE_01" inventoryItemId="FA101" inventoryItemTypeId="NON_SERIAL_INV_ITEM" locationSeqId="TLTLTL01" ownerPartyId="COMPANY" productId="FALCON_BLUE" quantityOnHandTotal="99.000000" unitCost="600.000000"/>
+<InventoryItem accountingQuantityTotal="99.000000" availableToPromiseTotal="99.000000" datetimeReceived="2025-01-01 09:36:42.0" facilityId="WAREHOUSE_01" inventoryItemId="FA102" inventoryItemTypeId="NON_SERIAL_INV_ITEM" locationSeqId="TLTLTL01" ownerPartyId="COMPANY" productId="PP10001" quantityOnHandTotal="99.000000" unitCost="600.000000"/>
+
+<ProductFacility computedLastInventoryCount="99.000000" facilityId="WAREHOUSE_01" inventoryItemId="FA101" minimumStock="10" allowBrokering="N" lastInventoryCount="99.000000" productId="FALCON_BLUE"/>
+<ProductFacility computedLastInventoryCount="99.000000" facilityId="WAREHOUSE_01" inventoryItemId="FA102" minimumStock="10" allowBrokering="N" lastInventoryCount="99.000000" productId="PP10001"/>
+
+<OrderItem orderId="SOS10001" orderItemSeqId="1" shipGroupSeqId="1" productId="PP10001" statusId="ITEM_COMPLETED" quantity="1" />
+<OrderStatus orderStatusId="SOS10001APP11" orderId="SOS10001" orderItemSeqId="1" statusId="ITEM_COMPLETED"/>
+<OrderItem orderId="SOS10001" orderItemSeqId="2" shipGroupSeqId="2" productId="FALCON_BLUE" statusId="ITEM_COMPLETED" quantity="1" />
+<OrderStatus orderStatusId="SOS10001APP22" orderId="SOS10001" orderItemSeqId="2" statusId="ITEM_COMPLETED" />
+<OrderStatus orderStatusId="SOS10001OMPLETED" orderId="SOS10001" statusId="ORDER_COMPLETED" statusUserLogin="vijay.mallya" />
+
+<OrderHeader  orderId="SOS10001" orderTypeId="SALES_ORDER" statusId="ORDER_COMPLETED" createdBy="vijay.mallya" orderDate="2025-11-15 00:00:00.0" entryDate="2025-11-15 00:00:00.0" />
+
+</entity-engine-xml> 

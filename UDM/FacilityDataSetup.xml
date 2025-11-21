@@ -1,0 +1,25 @@
+
+<entity-engine-xml>
+
+<!--Create the Facility-->
+<Facility facilityId="WAREHOUSE_01" facilityTypeId="WAREHOUSE" facilityName="Main Warehouse" ownerPartyId="COMPANY"/>
+    
+<!--Create the FacilityLocation-->
+<FacilityLocation facilityId="WAREHOUSE_01" locationSeqId="A-01-01" areaId="A" aisleId="01" sectionId="01"/>  
+<FacilityLocation facilityId="WAREHOUSE_01" locationSeqId="A-01-02" areaId="A" aisleId="01" sectionId="02"/>
+
+<!-- Create FacilityGroup -->
+<FacilityGroup facilityGroupId="FG10001" facilityGroupTypeId="FULFILLMENT" facilityGroupName="DemoFacility" />
+
+<!--Assign Facility to the group-->
+<FacilityGroupMember facilityGroupId="FG10001" facilityId="WAREHOUSE_01" fromDate="2025-08-12 05:56:50.924"/>
+
+<!--Add Product to the facility-->
+<ProductFacilityLocation facilityId="WAREHOUSE_01" locationSeqId="A-01-01" productId="PP10001"/>
+<ProductFacilityLocation facilityId="WAREHOUSE_01" locationSeqId="A-01-02" productId="PP10008"/>
+
+<!--Product Facility-->
+<ProductFacility productId="PP10001" computedLastInventoryCount="100.000000" facilityId="WAREHOUSE_01" inventoryItemId="FA101" minimumStock="10" allowBrokering="N" lastInventoryCount="100.000000"/>
+<ProductFacility productId="PP10008" computedLastInventoryCount="100.000000" facilityId="WAREHOUSE_01" inventoryItemId="FA102" minimumStock="10" allowBrokering="N" lastInventoryCount="100.000000"/>
+  
+</entity-engine-xml>

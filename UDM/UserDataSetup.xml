@@ -1,0 +1,27 @@
+<entity-engine-xml> 
+
+<!--Application User-->
+<Party partyId="SS10002" partyTypeId="PERSON" statusId="PARTY_ENABLED" createdDate="2025-08-04 20:00:00" />
+<Person partyId="SS10002" firstName="steve" lastName="rogers" />
+<PartyRole partyId="SS10002" roleTypeId="APPLICATION_USER"/>
+
+<!--Security Permission, Group and Group Permission Association-->
+
+<SecurityPermission permissionId="READ_ACCESS" description="Base ACCESS permission"/>
+<SecurityPermission permissionId="WRITE_ACCESS" description="Special permission"/>
+<SecurityPermission permissionId="COMMON_ADMIN" description="Common administrator access"/>
+
+<SecurityGroup groupId="ACCOUNTANT" description="ACCOUNTANT"/>
+<SecurityGroup groupId="ADMIN_VIEW" description="Admin View"/>
+
+<!-- Associate the Permission with group-->
+<SecurityGroupPermission groupId="ADMIN_VIEW" permissionId="READ_ACCESS" fromDate="2025-02-17 08:26:44.59"/>
+<SecurityGroupPermission groupId="ADMIN_VIEW" permissionId="WRITE_ACCESS" fromDate="2025-02-17 08:26:44.59"/>
+<SecurityGroupPermission groupId="ACCOUNTANT" permissionId="COMMON_ADMIN" fromDate="2025-02-17 08:26:44.59"/> 
+
+<!--Application User and Association with Security Group-->
+<UserLogin userLoginId="steve.rogers" currentPassword="encrypt@123" enabled="Y" partyId="SS10002"/>
+<UserLoginSecurityGroup userLoginId="steve.rogers" groupId="ACCOUNTANT" fromDate="2025-11-17 12:08:00.000"/>
+<UserLoginSecurityGroup userLoginId="steve.rogers" groupId="ADMIN_VIEW" fromDate="2025-11-17 12:08:00.000"/>
+
+</entity-engine-xml>
