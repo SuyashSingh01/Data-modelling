@@ -10,7 +10,7 @@
 <ProductStoreCatalog productStoreId="STORE_1" prodCatalogId="CATA100" fromDate="2025-11-14 10:00:00.0"/>
 
 
-<!--                        CATEGORIES (10 TOTAL)                       -->
+<!--                        CATEGORIES                                 -->
 
 <!--                        Electronics                                 -->
 <ProductCategory productCategoryId="CAT100" categoryName="Electronics"/>
